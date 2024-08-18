@@ -46,9 +46,9 @@
                               enctype="multipart/form-data">
                             <div class="modal-body">
                                 <div class="mb-3">
-                                    <label for="description">[[#{categoria.description}]]</label>
+                                    <label for="descripcion">[[#{categoria.descripcion}]]</label>
 
-                                    <input type="text" class="form-control" name="description" required="true"/>
+                                    <input type="text" class="form-control" name="descripcion" required="true"/>
                                 </div>
                                 <div class="mb-3">
                                     <label for="activo"> [[#{categoria.activo}]]</label>
@@ -90,7 +90,7 @@
                                     <tbody>
                                         <tr th:each="categoria, contador : ${categorias}">
                                             <td th:text="${contador.count}">1</td>
-                                            <td th:text="${categoria.description}">Nombre de la categoría</td>
+                                            <td th:text="${categoria.descripcion}">Nombre de la categoría</td>
                                             <td th:text="${categoria.activo ? 'Activa' : 'Inactiva'}">Activo/Inactivo</td>
                                             <td>
                                                 <a th:href="@{/categoria/eliminar/}+${categoria.idCategoria}" class="btn btn-danger">
@@ -150,7 +150,7 @@
                                                     <label for="descripcion">[[#{accion.descripcion}]]</label>
 
                                                     <input  type="text" class="form-control"
-                                                            name="description" th:field="*{description}"
+                                                            name="descripcion" th:field="*{descripcion}"
                                                             required="true"/>
                                                 </div>  
                                                 <div class="mb-3">
